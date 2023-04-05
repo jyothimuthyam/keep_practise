@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav id="navbar">
+                <div class="logo"><span>Laundry Loft</span></div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#order">Request Service</a></li>
+                </ul>
+            </nav>
+            <div class="overlay">
+                <section id="home">
+                    <h1 class="h-primary">Welcome to laundry Loft Services</h1>
+                    <br>
+                    <p>A laundry service is a service that washes and irons clothes for guests. </p>
+                    <a class="btn" href="#order">Request Service</a>
+                </section>
+            </div>
+        </header>
+
+        <div id="menu">
+            <div class="heading">
+                <h1>Our Services</h1>
+            </div>
+            <div class="card">
+                <img src="./images/laundryc.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h3>Laundry Products</h3>
+                    </div>
+                    <p>A detergent is a substance or a mixture containing soaps and/or surfactants </p>
+                    <button onclick="location.href='#order'">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/laundry2.jpg" alt="laundry services">
+                <div class="details">
+                    <div class="details-sub">
+                        <h3>Laundry cleaning</h3>
+                    </div>
+                    <p>Removing stains from items using the appropriate procedures. Performing minor sewing duties as
+                        needed.</p>
+                    <button onclick="location.href='#order'">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/stain3.jpg" alt="Stain removal">
+                <div class="details">
+                    <div class="details-sub">
+                        <h3>Stain Removal</h3>
+                    </div>
+                    <p>Stain removers often contain alcohol which acts as a solvent for both water-based and oil-based
+                        stains.</p>
+
+
+                    <button onclick="location.href='#order'">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/laundry4.jpg" alt="laundry4">
+                <div class="details">
+                    <div class="details-sub">
+                        <h3>Laundry Drywash</h3>
+                    </div>
+                    <p>A small appliance that, when heated, is used to press clothes to remove wrinkles and unwanted
+                        creases. </p>
+                    <button onclick="location.href='#order'">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/laundryiron.jpg" alt="laundryiron">
+                <div class="details">
+                    <div class="details-sub">
+                        <h3>Laundry iron</h3>
+
+                    </div>
+                    <p> Ironing is the use of a machine, usually a heated tool (an iron), to remove wrinkles and
+                        unwanted creases from fabric. The heating is commonly done to a temperature of 180–220 °Celsius
+                    </p>
+                    <button onclick="location.href='#order'">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="./images/folding1.jpg" alt="folding">
+                <div class="details">
+                    <div class="details-sub">
+                        <h3>Folding</h3>
+                    </div>
+                    <p>Folding greatly reduces the amount of wrinkles and creases in your laundry. When you go out in a
+                        new shirt or pair of pants, you want to look your best. </p>
+                    <button onclick="location.href='#order'">Book Now</button>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="about">
+            <h1 class="title">About us</h1>
+            <div class="about_row">
+                <div class="about_column">
+                    <p>We Laundryloft services provide you the best laundry services in Hyderabad, Vijayawada and
+                        Guntur.
+                        Laundryloft services basically takes care of your garments and maintain the highest standards in
+                        laundry service.
+                        With handy experience in garment care, we have designed sophisticated method for dry cleaning
+                        and laundering technologies for stain removal and restoration for a variety of garments and
+                        fabrics.
+                        <button id="btn1">learn more</button>
+                </div>
+                <div class="about_column">
+                    <img src="./images/about.jpg" alt="about">
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2 id="modal_user_name"></h2>
+      </div>
+      <div class="modal-body">
+        <p>Your Appointment Booked Successfully with Request Id-SER1234</p>
+        <p id="modal_email_id"></p>
+      </div>
+      <div class="modal-footer">
+        <h3>Thank You.Visit Us Again!</h3>
+      </div>
+    </div>
+  
+  </div>
+  
+        <div id="order">
+            <h1 class="title1">Request Service</h1>
+        <form id="service_request_form" onsubmit="event.preventDefault();showPopup(this);">
+                <input type="text" name="user_name" class="inp_box" placeholder="Name">
+                <input type="email" name="email_id" class="inp_box" placeholder="Email">
+                <input type="Phone" name="phone_number" class="inp_box" placeholder="Phone">
+                <textarea type="text" name="user_address" class="inp_box text_area" placeholder="Adress"></textarea>
+                <button id="book_appointment" type="submit" class="btn2" value="submit">Book Appointment</button>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <div> &copy;copyright 2023</div>
+        <a href="mail to laundryloft gmail.com">laundryloft@gmail.com</a>
+        <!-- <a href = "mailto:laundryloft.com?subject = Feedback&body = Message"> -->
+            <!-- Send Feedback
+            </a> -->
+
+        <div class="social-menu">
+            <ul>
+                <li><a href="https://www.instagram.com/" target="blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+</body>
+<script>
+    function showPopup(event){
+        var userName = event.user_name.value; 
+        var emailId = event.email_id.value;  
+        var userPhone = event.phone_number.value;
+        var useraddress = event.user_address.value;      
+        var modal = document.getElementById("myModal");
+        if((userName !="" && userName !=null && userName !=undefined) && (emailId !="" && emailId !=null && emailId !=undefined)&&(userPhone !="" && userPhone!=null && userPhone !=undefined)&&(useraddress !="" && useraddress !=null && useraddress !=undefined)){
+            document.getElementById("modal_user_name").innerHTML = "Hello" + " " + userName;
+            document.getElementById("modal_email_id").innerHTML = "Details sent to your email id:" + " "+ emailId;
+            modal.style.display = "block";
+        }
+        //Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+  document.getElementById("service_request_form").reset();
+  modal.style.display = "none";
+  
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    document.getElementById("service_request_form").reset();
+    modal.style.display = "none";
+  }
+}
+    }
+</script>
+</html>
