@@ -1,0 +1,93 @@
+<html>
+
+<body>
+    <h1>JavaScript String</h1>
+    <h2>The concat() Method</h2>
+    <p id="demo"></p>
+    <hr />
+    <h2>The charat() Method</h2>
+    <p id="demo1"></p>
+    <hr />
+    <h2>The charCodeAt() Method</h2>
+    <p id="demo2"></p>
+    <hr />
+    <h2>String index() Method</h2>
+    <p id="demo3"></p>
+    <hr />
+    <h2>string include() Method</h2>
+    <p id="demo4"></p>
+    <hr />
+    <h2>String ends with() Method</h2>
+    <p id="demo5"></p>
+    <hr />
+    <h2>at() Method</h2>
+    <p id="demo6"></p>
+    <hr />
+    <h2>constructor() Method</h2>
+    <p id="demo7"></p>
+    <hr />
+    <h2>fromCharCode() Method</h2>
+    <p id="demo8"></p>
+    <hr />
+    <h2>string codepoint all() Method</h2>
+    <p id="demo9"></p>
+    <hr />
+</body>
+<script>
+    let text1 = "Hello";
+    let text2 = "Team!";
+    let text3 = text1.concat(" ", text2);
+    document.getElementById("demo").innerHTML = text3;
+</script>
+<script>
+    let text4 = "Good Morning"; //using charat() Method
+    document.getElementById("demo1").innerHTML = text4.charAt(0);
+</script>
+<script>
+    let text5 = "welcome to JavaScript"; // using charCodeAt() Method
+    document.getElementById("demo2").innerHTML = text5.charCodeAt(1);
+</script>
+
+<script>
+    let text6 = "Good to know javascript and javascript string!";
+    let index = text6.indexOf("javascript");
+    console.log('index######', index)
+    document.getElementById("demo3").innerHTML = index;
+
+</script>
+<script>
+    let text7 = "Hello team, welcome to the javascript world.";
+    document.getElementById("demo4").innerHTML = text7.includes("world");
+</script>
+
+<script>
+    let text8 = "Apple, banana";
+    document.getElementById("demo5").innerHTML = text8.endsWith("banana");
+</script>
+
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit = fruits.at(3);
+    console.log('fruits', fruit)
+    document.getElementById("demo6").innerHTML = fruit;
+</script>
+
+<script>
+    let text9 = "Guava";
+    let character = text9.at(0);
+
+    document.getElementById("demo7").innerHTML = character;
+</script>
+<script>
+    let textfrom = String.fromCharCode(65);
+    document.getElementById("demo8").innerHTML = textfrom; 
+</script>
+
+<script>
+    let text10 = "Have a Nice Day";
+    let code = text10.codePointAt(0);
+    document.getElementById("demo9").innerHTML = code;
+</script>
+</body>
+
+</html>
